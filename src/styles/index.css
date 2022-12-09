@@ -74,3 +74,30 @@ form input{
     padding: 8px;
     border-radius: 6px;
 }
+
+form select{
+    width: 100%;
+    border: 1px solid rgb(215, 215, 215) !important;
+    background: transparent !important;
+    padding: 8px;
+    border-radius: 6px;
+}
+form textarea{
+    width: 100%;
+    border: 1px solid rgb(215, 215, 215) !important;
+    background: transparent !important;
+    padding: 8px;
+    border-radius: 6px;
+}
+form tbody td.addr{
+    word-break: break-all !important;
+}
+p.color-green{
+    color: green;
+}
+p.color-red{
+    color: rgba(255, 0, 0, 0.427);
+}
+.container{
+    padding-bottom: 40px;
+}
