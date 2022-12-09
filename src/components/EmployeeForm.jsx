@@ -60,7 +60,7 @@ export const EmployeeForm = () => {
                         <label className="form-label mt-2" htmlFor="inputValid">Roll No</label> <br />
                         <input
                             name="roll"
-                            min="1" max="3"
+                           
                             type="number"
                             value={inputValues.roll}
                             onChange={handleInputChange}
@@ -96,7 +96,7 @@ export const EmployeeForm = () => {
                             id="inputValid"
                         /> */}
 
-                        <select name="grade" id="grade" value={inputValues.class} onChange={handleInputChange}>
+                        <select name="grade" id="grade" value={inputValues.grade} onChange={handleInputChange}>
                             <option value="1st class">1st class</option>
                             <option value="2nd class">2nd class</option>
                             <option value="3rd class">3rd class</option>
@@ -151,11 +151,23 @@ export const EmployeeForm = () => {
                     </div>
 
 
-                    <div className="d-grid gap-2 mt-3">
+                    {/* <div className="d-grid gap-2 mt-3">
                         <button type="submit" onClick={()=>setTimeout(() => {
                             navigate(-1)
                         },1400)} className="btn btn-outline-primary btn-block">{id ? "Edit" : "Add"} Employee</button>
-                    </div>
+                    </div> */}
+  <div className="d-grid gap-2 mt-3">
+                    {
+                       
+                        (inputValues.phone&&inputValues.address&&inputValues.email&&inputValues.grade&&inputValues.name&&inputValues.roll)===''?
+                        <button type="submit" disabled onClick={()=>alert('Please enter all inputs')} className="btn btn-outline-primary btn-block">{id ? "Edit" : "Add"} Employee</button>: <button type="submit" onClick={()=>setTimeout(() => {
+                            navigate(-1)
+                        },1400)} className="btn btn-outline-primary btn-block">{id ? "Edit" : "Add"} Employee</button>
+                       
+                    }
+                     </div>
+
+                
                 </form>
             </div>
 
