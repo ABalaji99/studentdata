@@ -228,7 +228,7 @@ export const EmployeeForm = () => {
                 onClick={() =>
                   setTimeout(() => {
                     navigate(-1);
-                  }, 1400)
+                  }, 1500)
                 }
                 className="btn btn-outline-primary btn-block"
               >
