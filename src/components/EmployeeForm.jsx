@@ -40,16 +40,16 @@ export const EmployeeForm = () => {
 
             <div className="d-flex my-5 justify-content-between">
                 <button type="button" className="" onClick={() => navigate(-1)}>Go Back</button>
-                <h1 className="text-center">{id ? "Edit" : "Add new"} Employee</h1>
+                <h1 className="text-center">{id ? "Edit" : "Add new"} Student</h1>
                 <div />
-            </div>
+            </div> 
 
             <div className="cards">
             {
                 showAlert && (
                     <div className="px-5">
                         <div className="alert alert-success">
-                            <strong>Well done!</strong> {id ? "edited" : "added a new"} Employee.
+                            <strong>Well done!</strong> {id ? "edited" : "added a new"} Student.
                         </div>
                     </div>
                 )
@@ -82,6 +82,7 @@ export const EmployeeForm = () => {
                             onChange={handleInputChange}
                             className=""
                             id="inputValid"
+                            required
                         />
                     </div>
 
@@ -160,7 +161,9 @@ export const EmployeeForm = () => {
                     {
                        
                         (inputValues.phone&&inputValues.address&&inputValues.email&&inputValues.grade&&inputValues.name&&inputValues.roll)===''?
-                        <button type="submit" disabled onClick={()=>alert('Please enter all inputs')} className="btn btn-outline-primary btn-block">{id ? "Edit" : "Add"} Employee</button>: <button type="submit" onClick={()=>setTimeout(() => {
+                     
+                         <button type="submit" onClick={()=>alert('Please enter all inputs')} className="btn btn-outline-primary btn-block">{id ? "Edit" : "Add"} Employee</button>
+                        : <button type="submit" onClick={()=>setTimeout(() => {
                             navigate(-1)
                         },1400)} className="btn btn-outline-primary btn-block">{id ? "Edit" : "Add"} Employee</button>
                        
