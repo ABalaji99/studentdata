@@ -4,7 +4,7 @@ import { getListEmployees } from '../service/localstorage';
 import { useNavigate } from 'react-router-dom';
 
 export const EmployeeItem = ({ employee, setEmployees }) => {
-    const { id, name, email, address, phone } = employee;
+    const { id ,roll, name, grade, email, address, phone } = employee;
     const navigate = useNavigate();
 
     const deleteEmployee = () => {
@@ -14,7 +14,9 @@ export const EmployeeItem = ({ employee, setEmployees }) => {
 
     return (
         <tr className="table table-responsive">
+            <th>{roll}</th>
             <th>{name}</th>
+            <th>{grade}</th>
             <td>{email}</td>
             <td>{address}</td>
             <td>{phone}</td>

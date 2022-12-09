@@ -19,7 +19,9 @@ export const EmployeeList = () => {
                         <table className="table table-hover">
                             <thead>
                                 <tr>
+                                    <th scope='col'>Roll No</th>
                                     <th scope="col">Name</th>
+                                    <th scope="col">Class</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Address</th>
                                     <th scope="col">Phone</th>
